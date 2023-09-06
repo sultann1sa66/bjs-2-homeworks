@@ -19,7 +19,6 @@ function solveEquation(a, b, c) {
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let percentPerMounth = percent / (100 * 12);
   let payment = (amount - contribution) * (percentPerMounth / (1 - (1 + percentPerMounth) ** (countMonths - (countMonths * 2))));
-  let num = payment * countMonths;
-  let result = +num.toFixed(2);
-  return result;
+  let result = payment * countMonths;
+  return +result.toFixed(2);
 }
